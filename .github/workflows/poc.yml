@@ -1,0 +1,15 @@
+name: poc-pipeline
+
+on:
+  push:
+    branches:
+      - 'feature/*'
+
+jobs:
+  build-test-analyze:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout del código
+      - name: Checkout repository
+        uses: actions/checkout@v4
